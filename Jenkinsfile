@@ -17,6 +17,9 @@ node(builder) {
             stage('Cleanup') {
                 deleteDir()
             }
+            stage('build') {
+                sh("echo 'Hello from pipeline!")
+            }
             currentBuild.result = 'SUCCESS'
         } catch (err) {
             currentBuild.result = 'FAILURE'
