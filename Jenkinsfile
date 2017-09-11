@@ -18,7 +18,7 @@ node(builder) {
                 deleteDir()
             }
             stage('build') {
-                sh("echo 'Hello from pipeline!")
+                sh("echo 'Hello from pipeline!'")
             }
             currentBuild.result = 'SUCCESS'
         } catch (err) {
